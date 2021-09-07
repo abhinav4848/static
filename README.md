@@ -1,2 +1,1 @@
-# static
-static sites
+Just small projects to be hosted on github
