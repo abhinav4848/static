@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <style>
+        #randomArrow {
+            font-weight: bold;
+            color: #000;
+            font-size: 5rem;
+            text-align: center;
+        }
+    </style>
+
+    <title>Arrow Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="my-3">Arrow Generator</h1>
+        <div class="row">
+            <div class="col-sm-4">
+
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <p class="card-text" id="randomArrow"></p>
+                        <p class="card-text">Counting down: <b><span id="timeToChange"></span></b> seconds</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <form onsubmit="return false">
+                    <div class="mb-3">
+                        <label for="speed" class="form-label">How many Seconds?</label>
+                        <select class="form-select" name="speed" id="speed">
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <option value="4">Four</option>
+                            <option value="5" selected>Five</option>
+                            <option value="6">Six</option>
+                            <option value="7">Seven</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="countdownMethod" checked>
+                            <label class="form-check-label" for="countdownMethod">Static Counting</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="audioGuide" checked>
+                            <label class="form-check-label" for="audioGuide">Audio Guidance</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
