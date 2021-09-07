@@ -48,6 +48,13 @@ function timing() {
 
     var countdownMethod = document.getElementById("countdownMethod");
     if (!countdownMethod.checked) {
+        // if static time is off
+        if (maxtime > 1) {
+            // if maxtime chosen is not 1 second,
+            // don't generate random time <2 secs.
+            // this is done so that random time of 1 sec is not shown unless explicitly chosen by user.
+            mintime = 2;
+        }
         var randTime = Math.floor((Math.random() * (maxtime - mintime + 1) + mintime));
     } else {
         var randTime = maxtime;
